@@ -445,7 +445,7 @@ body{
 .footerLi{
     list-style: none;
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 420px){
     
     /*grid menu 320px*/
     .contenedor{
