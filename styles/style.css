@@ -1,0 +1,557 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(227, 238, 231);
+}
+    /*grid Menu*/
+.contenedor{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1.5fr 1fr 2fr 2fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "cajaTitulo cajaTitulo cajaTitulo cajaTitulo"
+    "nav nav nav nav"
+    "buscador buscador buscador buscador"
+    "ofertasPopulares ofertasPopulares ofertasPopulares ofertasPopulares"
+    "blank1 oferta1 caracteristicas1 blank2"
+    "blank1 oferta2 caracteristicas2 blank2"
+    "blank1 oferta3 caracteristicas3 blank2"
+    "blank1 oferta4 caracteristicas4 blank2"
+    "blank1 oferta5 caracteristicas5 blank2"
+    "blank1 oferta6 caracteristicas6 blank2"
+    "footer footer footer footer"
+    ;
+}
+    /*grid Contacto*/
+.contenedora{
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "cajaTitulo cajaTitulo cajaTitulo cajaTitulo"
+    "nav nav nav nav"
+    "registro registro registro registro"
+    "textArea textArea textArea textArea"
+    "footer footer footer footer"
+    ;
+}
+/*grid catalogo*/
+.contenedoraCatalogo{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 20fr 1fr;
+    grid-template-areas: 
+    "cajaTitulo cajaTitulo cajaTitulo"
+    "nav nav nav"
+    "blank3 titleCatalogo blank4"
+    "blank3 seccionCatalogo blank4"
+    "footer footer footer"
+    ;
+}
+    /*contacto CSS*/
+.registro{
+    grid-area: registro;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.registroTitle{
+    font-family: 'Anton', sans-serif;
+    font-size: xx-large;
+}
+.registroForm{
+    margin: 2%;
+}
+.textArea{
+    grid-area: textArea;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(193, 202, 196);
+}
+.textAreaInput{
+    font-family:  'Nunito Sans', sans-serif;
+    font-size: large;
+}
+.comentariosTitle{
+    font-family: 'Anton', sans-serif;
+    font-size: xx-large;
+}
+.cajaTitulo{
+    display: flex;
+    justify-content: center;
+    grid-area: cajaTitulo;
+    font-family: 'Anton', sans-serif;
+    font-size: xx-large;
+    word-spacing: 7px;
+    background-color: rgb(227, 238, 231);
+    text-shadow: rgb(110, 109, 109) 3px 3px 8px;
+}
+.titulo{
+    margin-top: 20px;
+}
+.animate__animated.animate__backInDown{
+    --animate-duration: 0.7s;
+}
+.nav{
+    grid-area: nav;
+    font-family: 'Nunito Sans', sans-serif;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: x-large;
+    align-items: center;
+    background-color: rgb(193, 202, 196);
+    border-bottom: solid rgb(121, 124, 122) 1px;
+    border-top: solid rgb(184, 187, 185) 1px;
+}
+.navegadorItem{
+    text-decoration: none;
+    transition: all 1.5s ease;
+    padding: 20px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    color: black;
+}
+.navegadorItem:hover{
+    text-shadow: black 4px 3px 4px;
+}
+
+/*Catalogo CSS*/
+
+.titleCatalogo{
+    grid-area: titleCatalogo;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: 'Anton', sans-serif;
+    font-size: x-large;
+}
+.seccionCatalogo{
+    grid-area: seccionCatalogo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.prod{
+    background-color: turquoise;
+    width: 1000px;
+    height: 200px;
+    margin: 20px;
+}
+.titleProducto{
+    font-family: 'Bebas Neue', cursive;
+    font-size: x-large;
+}
+.cajaProd{
+    display: flex;
+    flex-direction: row;
+    background-color: violet;
+}
+.divProd{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: large;
+    background-color: tomato;
+    width: 500px;
+    padding-left: 60px;
+}
+.esp{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: x-large;
+}
+.compra{
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    margin-top: 100px;
+    margin-left: 40px;
+    width: 80px;
+    height: 40px;
+}
+.blank3{
+    grid-area: blank3;
+}
+.blank4{
+    grid-area: blank4;
+}
+/*menu CSS*/
+.buscador{
+    grid-area: buscador;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(227, 238, 231);
+}
+.enviarBoton{
+    background-color: rgb(201, 206, 203);
+    font-family: 'Nunito Sans', sans-serif;
+    transition: all 0.7s ease;
+}
+.enviarBoton:hover{
+    transform: scale(1.3, 1.3);
+}
+.placeholder{
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: rgb(246, 248, 247);
+}
+.buscadorText{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: x-large;
+}
+.ofertasPopulares{
+    font-family: 'Bebas Neue', cursive;
+    font-size: xx-large;
+    grid-area: ofertasPopulares;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s ease;
+    background-color: rgb(227, 238, 231);
+}
+.ofertasPopulares:hover{
+    transform: scale(1.2, 1.2);
+}
+.blank1{
+    background-color: rgb(227, 238, 231);
+    grid-area: blank1;
+}
+.blank2{
+    background-color: rgb(227, 238, 231);
+    grid-area: blank2;
+}
+.oferta1{
+    grid-area: oferta1;
+    background-color: rgb(193, 202, 196);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(25, 26, 25) 1px;
+    border-left: solid rgb(184, 187, 185) 1px;
+}
+.title1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: x-large;
+}
+.caracteristicas1{
+    grid-area: caracteristicas1;
+    background-color: rgb(193, 202, 196);
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(25, 26, 25) 1px;
+    border-right: solid rgb(184, 187, 185) 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: large;
+    transition: all 2s ease;
+}
+.caracteristicas1:hover{
+    background-color: rgb(178, 185, 180);
+    text-shadow: rgb(228, 235, 230) 3px 3px 3px;
+}
+.titleEsp{
+    font-family: 'Bebas Neue', cursive;
+    font-size: x-large;
+}
+.oferta2{
+    grid-area: oferta2;
+    background-color: rgb(220, 230, 223);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(207, 211, 208) 1px;
+    border-left: solid rgb(207, 211, 208) 1px;
+}
+.title2{
+    font-family: 'Bebas Neue', cursive;
+    font-size: x-large;
+}
+.caracteristicas2{
+    grid-area: caracteristicas2;
+    background-color: rgb(220, 230, 223);
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(207, 211, 208) 1px;
+    border-right: solid rgb(207, 211, 208) 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: large;
+    transition: all 2s ease;
+}
+.caracteristicas2:hover{
+    background-color: rgb(214, 221, 216);
+    text-shadow: rgb(228, 235, 230) 3px 3px 3px;
+}
+.oferta3{
+    grid-area: oferta3;
+    background-color: rgb(193, 202, 196);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(207, 211, 208) 1px;
+    border-left: solid rgb(184, 187, 185) 1px;
+}
+.title3{
+    font-family: 'Bebas Neue', cursive;
+    font-size: x-large;
+}
+.caracteristicas3{
+    grid-area: caracteristicas3;
+    background-color: rgb(193, 202, 196);
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(207, 211, 208) 1px;
+    border-right: solid rgb(184, 187, 185) 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: large;
+    transition: all 2s ease;
+}
+.caracteristicas3:hover{
+    background-color: rgb(178, 185, 180);
+    text-shadow: rgb(228, 235, 230) 3px 3px 3px;
+}
+.oferta4{
+    grid-area: oferta4;
+    background-color: rgb(220, 230, 223);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(207, 211, 208) 1px;
+    border-left: solid rgb(207, 211, 208) 1px;
+}
+.title4{
+    font-family: 'Bebas Neue', cursive;
+    font-size: x-large;
+}
+.caracteristicas4{
+    grid-area: caracteristicas4;
+    background-color: rgb(220, 230, 223);
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(207, 211, 208) 1px;
+    border-right: solid rgb(207, 211, 208) 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: large;
+    transition: all 2s ease;
+}
+.caracteristicas4:hover{
+    background-color: rgb(214, 221, 216);
+    text-shadow: rgb(228, 235, 230) 3px 3px 3px;
+}
+.oferta5{
+    grid-area: oferta5;
+    background-color: rgb(193, 202, 196);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(207, 211, 208) 1px;
+    border-left: solid rgb(184, 187, 185) 1px;
+}
+.title5{
+    font-family: 'Bebas Neue', cursive;
+    font-size: x-large;
+}
+.caracteristicas5{
+    grid-area: caracteristicas5;
+    background-color: rgb(193, 202, 196);
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(207, 211, 208) 1px;
+    border-right: solid rgb(184, 187, 185) 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: large;
+    transition: all 2s ease;
+}
+.caracteristicas5:hover{
+    background-color: rgb(178, 185, 180);
+    text-shadow: rgb(228, 235, 230) 3px 3px 3px;
+}
+.oferta6{
+    grid-area: oferta6;
+    background-color: rgb(220, 230, 223);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(207, 211, 208) 1px;
+    border-left: solid rgb(207, 211, 208) 1px;
+}
+.title6{
+    font-family: 'Bebas Neue', cursive;
+    font-size: x-large;
+}
+.caracteristicas6{
+    grid-area: caracteristicas6;
+    background-color: rgb(220, 230, 223);
+    border-bottom: solid rgb(184, 187, 185) 1px;
+    border-top: solid rgb(207, 211, 208) 1px;
+    border-right: solid rgb(207, 211, 208) 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: large;
+    transition: all 2s ease;
+}
+.caracteristicas6:hover{
+    background-color: rgb(214, 221, 216);
+    text-shadow: rgb(228, 235, 230) 3px 3px 3px;
+}
+.footer{
+    grid-area: footer;
+}
+.ulFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.iconA{
+    transition: all 1s ease;
+}
+.iconA:hover{
+    transform: scale(1.5, 1.5);
+}
+.footerLi{
+    list-style: none;
+}
+@media screen and (max-width: 320px){
+    
+    /*grid menu 320px*/
+    .contenedor{
+        display: grid;
+        grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1.5fr 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "cajaTitulo"
+        "nav"
+        "nav"
+        "nav"
+        "nav"
+        "buscador"
+        "ofertasPopulares"
+        "oferta1"
+        "caracteristicas1"
+        "oferta2"
+        "caracteristicas2"
+        "oferta3"
+        "caracteristicas3"
+        "oferta4"
+        "caracteristicas4"
+        "oferta5"
+        "caracteristicas5"
+        "oferta6"
+        "caracteristicas6"
+        "footer"
+        ;
+    }
+    /*grid contacto 320px*/
+    .contenedora{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "cajaTitulo"
+        "nav"
+        "nav"
+        "nav"
+        "nav"
+        "registro"
+        "textArea"
+        "footer"
+        ;
+    }
+    .oferta1{
+        background-color: rgb(193, 202, 196);
+    }
+    .caracteristicas1{
+        background-color: rgb(220, 230, 223);
+    }
+    .oferta2{
+        background-color: rgb(193, 202, 196);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .caracteristicas2{
+        background-color: rgb(220, 230, 223);
+    }
+    .oferta3{
+        background-color: rgb(193, 202, 196);
+    }
+    .caracteristicas3{
+        background-color: rgb(220, 230, 223);
+    }
+    .oferta4{
+        background-color: rgb(193, 202, 196);
+    }
+    .caracteristicas4{
+        background-color: rgb(220, 230, 223);
+    }
+    .oferta5{
+        background-color: rgb(193, 202, 196);
+    }
+    .caracteristicas5{
+        background-color: rgb(220, 230, 223);
+    }
+    .oferta6{
+        background-color: rgb(193, 202, 196);
+    }
+    .caracteristicas6{
+        background-color: rgb(220, 230, 223);
+    }
+    .nav{
+        grid-area: nav;
+        font-family: 'Nunito Sans', sans-serif;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: x-large;
+        align-items: center;
+        background-color: rgb(193, 202, 196);
+        border-bottom: solid rgb(121, 124, 122) 1px;
+        border-top: solid rgb(184, 187, 185) 1px;
+    }
+    .cajaTitulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        grid-area: cajaTitulo;
+        font-family: 'Anton', sans-serif;
+        font-size: xx-large;
+        word-spacing: 7px;
+        background-color: rgb(227, 238, 231);
+        text-shadow: rgb(110, 109, 109) 3px 3px 8px;
+    }
+}
